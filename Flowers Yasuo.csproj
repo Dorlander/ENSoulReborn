@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7924DE0-BDB7-4ED9-A77C-1BFE31C75AF6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Flowers_Yasuo</RootNamespace>
+    <AssemblyName>Flowers Yasuo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <PreBuildEvent />
+    <PostBuildEvent />
+    <OutputPath>bin\Release</OutputPath>
+    <CscToolPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\Bin\Roslyn</CscToolPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clipper_library">
+      <HintPath>C:\Riot Games\EnsoulSharp\Reference\clipper_library.dll</HintPath>
+    </Reference>
+    <Reference Include="EnsoulSharp">
+      <HintPath>C:\Riot Games\EnsoulSharp\Reference\EnsoulSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="EnsoulSharp.SDK">
+      <HintPath>C:\Riot Games\EnsoulSharp\Reference\EnsoulSharp.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>C:\Riot Games\EnsoulSharp\Reference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Riot Games\EnsoulSharp\Reference\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>C:\Riot Games\EnsoulSharp\Reference\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics">
+      <HintPath>C:\Riot Games\EnsoulSharp\Reference\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyBase\MyChampions.cs" />
+    <Compile Include="MyCommon\MyEventManager.cs" />
+    <Compile Include="MyBase\MyLogic.cs" />
+    <Compile Include="MyCommon\MyExtraManager.cs" />
+    <Compile Include="MyCommon\MySpellManager.cs" />
+    <Compile Include="MyCommon\MyManaManager.cs" />
+    <Compile Include="MyCommon\MyMenuManager.cs" />
+    <Compile Include="MyLoader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
